@@ -1,0 +1,29 @@
+Términos importantes de git
+
+Repositorio
+
+Repositorio git
+	- local
+	- remoto
+
+
+
+En términos generales, un repositorio es un lugar para el almacenamiento de datos y, en nuestro caso, es normalmente una carpeta donde tenemos los archivos de nuestro proyecto de programación (código, configuración, documentación, recursos, etc).
+
+Esta carpeta es un repositorio local.
+Si queremos que pueda ser un repositorio remoto debemos incluirlo en un servidor de git.
+
+Este es un repositorio local, en nuestro equipo, donde podemos modificar los datos y comprobar que funcione.
+
+
+
+En git cada repositorio está asignado a un usuario, por su correo electrónico, y será su administrador.
+El administrador puede definir los permisos que tendrá cada usuario. Decidiendo si puede sólo enviar código, crear ramas, añadirlo en ciertas ramas, etc
+
+Cada usuario puede clonar el código y, normalmente, se usa para modificarlo y enviar el nuevo código al repositorio original
+
+Además, en git, cada repositorio puede tener varias ramas independientes que pueden ser modificadas sin afectar a las demás ramas.
+Normalmente cada rama se dedica a añadir funcionalidad al código, reparar algún fallo o cambiar el sistema de alguna función. Normalmente cuando el código está finalizado, se envia la rama al repositorio principal y se decide si se incluye o no.
+
+
+ 

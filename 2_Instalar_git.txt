@@ -1,0 +1,4 @@
+INSTALAR GIT
+
+Parar poder usar git, debemos tener el programa instalado y el usuario debe tener acceso a la herramienta en cualquier carpeta.
+

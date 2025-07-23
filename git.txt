@@ -1,0 +1,126 @@
+git
+Un repositorio es la ubicación principal de un proyecto. 
+	Incluye:
+		- Archivos de código
+		- Configuración.
+		- Recursos varios
+		- Documentación
+		- Licencias
+		- Estilos
+		- etc.
+		
+Un repositorio git, además de lo indicado, permite que la carpeta pueda almacenar distintas versiones (commits)., 
+con archivos nuevos o modificados, y poder ver las distintas versiones almacenadas sin mezclar cada versión 
+o formato del proyecto o parte del proyecto.
+
+Esto nos permite probar una forma nueva de manejar algo sin cambiar la versión anterior, permitiendo que las versiones no 
+se sobrescriban.
+
+Además puedes tener distintas versiones guardadas con el mismo código y desplegar el código automáticamente con 
+CI o CD
+
+Ese historial se guarda en una carpeta oculta, llamado .git 
+
+Repositorio Remoto.
+Normalmente, existe un repositorio central, guardado en internet a través de un servidor git, como Github, GitLab, etc o repositorios 
+privados. 
+
+Repositorio local
+Cada persona tiene un repositorio privado, almacenado de forma local en su propio equipo, y donde hace las modificaciones
+que considere.
+
+Cada repositorio contiene varios elementos:
+
+	Commits: puntos de control del proyecto.
+	
+	Ramas (branches): versiones paralelas del código.
+	
+	Etiquetas (tags): versiones estables o lanzamientos (ej. v1.0.0).
+	
+	Merge y rebase: combinación de ramas.
+	
+	Historial de cada archivo modificado.
+
+
+zonas o áreas de Git
+Cada archivo, de forma independiente, están incluidos en una de estas zonas.
+Los tres primeros son locales y el último es si usas un repositorio remoto.
+
+[1] Working Directory (directorio de trabajo)
+	Son los archivos nuevos o modificados, que todavía no le indicaste donde ponerlo.
+	Se crean modificando o creando archivos o carpetas.
+
+	Normalmente su estado es:
+		 Sin seguimiento o untracked : Que git no tiene datos anteriores relacionados
+		 Modificados o modified: Git registro un archivo, pero se ha cambiado, con lo que se consideran un archivo nuevo.
+		 
+	
+[2] Staging Area (área de preparación o "index")
+	Es una especie de "zona intermedia". Aquí colocas los archivos que quieres incluir en el próximo commit.
+	Estos se incluyen en este área usando:
+		git add <nombre_archivo_o_carpeta_o_._para_todo_desde_ruta_actual>
+		
+	Normalmente su estado es:
+		staged (preparado para el commit)
+
+
+
+[3] Repository (repositorio local)
+	Una vez que ya pusiste los archivos que querías, creas un commit.
+	Esto guarda un "snapshot" del proyecto en ese momento.
+
+Estado: committed
+
+[4] Remote Repository (repositorio remoto)
+
+Términos importantes
+
+	Commit	Un conjunto de cambios guardados.
+	Push	Enviar cambios al repositorio remoto.
+	Pull	Descargar cambios del repositorio remoto.
+	Clone	Copiar un repositorio remoto a tu máquina.
+	Branch	Línea paralela de desarrollo.
+	Merge	Unir ramas.
+	Fork	Copiar un proyecto de otro usuario para modificarlo tú.
+
+MANUAL
+-----------
+Un repositorio es una carpeta con 
+
+git es una instrucción creada para gestionar un repositorio git y las conexiones con otros repositorios git.
+	- Historial de versiones (commits). Archivos y carpetas guardadas en un momento dado. Están agrupados por rama.
+	- Ramas (branches). Sirven para agrupar commits con un objetivo.
+	- Etiquetas (tags). 
+
+
+
+INSTRUCCIONES
+---------------------
+git status
+	- Estado del repositorio.
+	
+git init
+	- Crear un repositorio local desde carpeta normal
+	
+git clone
+	Crear un repositorio local a partir de un repositorio remoto
+
+git add .
+
+git commit -m ""
+
+git log
+	- Historial de commits
+	
+
+git checkout <nueva_rama>
+	- Ir a rama indicada
+	OPCIONES
+		-b : Crear rama e ir a ella
+		
+git merge
+	- Juntar ramas
+	
+git remote add origin https://github.com/tu_usuario/mi_proyecto.git
+git branch -M main
+git push -u origin main
