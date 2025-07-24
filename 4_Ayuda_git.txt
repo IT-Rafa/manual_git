@@ -1,0 +1,39 @@
+AYUDA EN GIT
+
+Al tener instalado git tenemos la ayuda habitual con la opción -help
+Por ejemplo, si queremos conocer la sintaxis de git config, escribimos:
+	git config -help
+
+
+Otra ayuda importante es la herramienta git help, que abriendo una página de internet, localmente (sin internet), nos mostrará información más precisa.
+Por ejemplo, si queremos información sobre las opciones de git config, escribimos:
+	git help config
+	
+Nos mostrará información más precisa de git config, dividida en:
+	- NAME: Con el nombre de la instrucción.
+	- SYNOPSIS: Con el formato completo, similar a la ayuda con -help
+	- DESCRIPTION: Información completa de la instrucción.
+	- COMMANDS: En caso de ser una instrucción combinada, muestra sus opciones.
+	- OPTIONS: Información a añadir a la instrucción.
+	- Otros apartados dependiendo de la instrucción. Incluyendo ordenes antiguas, ejemplos, etc
+	
+En Linux tendremos la clásica información en su herramienta interna man:
+Por ejemplo, si queremos conocer la información de git config, escribimos:
+	man git-config
+	
+Otras opciones, a través de internet son las páginas de documentación:
+
+https://git-scm.com/
+Es la página oficial de git. 
+	- Información
+	- Documentación
+	- Libro de git
+	- Videos
+	- etc
+
+https://rogerdudler.github.io/git-guide/index.es.html
+Guía de git con explicaciones rápidas y nos deja descargar una hoja de resumen para git.
+
+https://www.atlassian.com/es/git
+En esta página hay información bien explicada de git
+

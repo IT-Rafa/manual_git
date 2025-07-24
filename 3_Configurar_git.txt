@@ -1,0 +1,43 @@
+CONFIGURAR GIT
+
+Si es la primera vez que usas git en este equipo debes configurar tu nombre de usuario y tu email.
+Esto será importante porque cuando queramos guardar algo, git firmará cada cambio con el usuario que lo creó.
+
+Para definir el usuario podemos usar la herramienta git config.
+Esta herramienta asigna valores a las variables internas de git y tiene tres niveles: 
+
+	- Nivel de sistema:		Se usa con la opción --system.
+									Son variables asignadas para todos los usuarios y se asignará a cualquier repositorio.
+									Esta configuración se almacena normalmente en la carpeta del programa git.
+										/etc/gitconfig en Linux, o C:\Program Files\Git\etc\gitconfig en Windows.
+									
+	- Nivel de usuario:		Se usa con la opción --global.
+									Son variables asignadas para tu usuario y será asignada a cualquier repositorio que crees con ese usuario.
+									Esta configuración se almacena en la carpeta de usuario:
+										<user>/.gitconfig o <user>/.config/git/config
+									
+	- Nivel de repositorio:	Es la opción por defecto, pero se puede especificando usando --local
+									Son variables asignadas al repositorio donde estés.
+									Esta configuración se almacena en el propio repositorio
+										<repositorio>.git/config
+									
+									
+Las reglas siguen el orden de sistema -> usuario -> repositorio.
+Cada nivel tendrá prioridad sobre el nivel anterior.
+
+Normalmente se crea un usuario, con su nombre y correo. Además podemos cambiar otras características.
+Esto sería la configuración básica, tras la primera instalación, con tus propios datos:
+	git config --global user.name "Nombre y Apellido"
+	git config --global user.email apellido@example.com
+	
+Si queremos ver la configuración actual seguimos usando git config, sin indicar el elemento a añadir:
+	git config --global user.name
+
+
+OTRAS CONFIGURACIONES
+
+Existen muchas otras configuraciones a usar, según se necesiten, como el editor, colores usados en los mensajes, configuración de firmas, etc.
+
+El editor de texto usado para pedir información.
+	core.edit
+	

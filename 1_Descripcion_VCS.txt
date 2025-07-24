@@ -1,6 +1,6 @@
 DESCRIPCIÓN DE GIT
 
-Git es un sistema para el control de versiones (En inglés: Version Control System o VCS) distribuido, gratuito y de código abierto.
+Git es un sistema para el control de versiones (En inglés: Version Control System o VCS) distribuido, gratuito y de código abierto y creado por Linus Torvalds en 2005
 Este sistema nos da ayudas para gestionar el interior de una carpeta con opciones útiles para controlar las distintas versiones.
 
 Para definir lo que hacer, em
