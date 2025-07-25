@@ -5,7 +5,7 @@ Este sistema nos da ayudas para gestionar el interior de una carpeta con opcione
 
 Para definir lo que hacer, em
 
-REPOSITORIO BÁSICO
+REPOSITORIO TRADICIONAL
 
 Normalmente una carpeta con un proyecto es lo que se denomina repositorio, o con su abreviatura repo. Esto nos permite guardar, eliminar, modificar y ordenar con carpetas, los archivos que introducimos, cada uno con su propio objetivo, como: 
 	- Archivos de código
@@ -27,33 +27,7 @@ Es decir, el proyecto podrá avanzar, pero solo tendremos una única versión co
 REPOSITORIO CON VCS
 
 Cada VCS tiene sus opciones propias y su sistema de gestión, pero todos nos darán herramientas para cambiar el repositorio básico por otro que nos permitirán hacer cosas relacionadas con las versiones:
-	- Podemos ver un historial de la evolución del proyecto, e ir a una estado anterior, sin que afecte a los estados anteriores, salvo que queramos.
-	- Nos permite tener distintas versiones del proyecto a la vez en la misma carpeta, juntar estas versiones, informarnos de errores al juntar versiones, etc.
-	- Nos incluye herramientas para compartir esos datos con otros usuarios
+	- Podemos ver un historial de la evolución del proyecto, y movernos entre ellos, sin modificar los estados posteriores, salve que queramos.
+	- Nos permite tener distintas versiones del proyecto a la vez en la misma carpeta y poder gestionar estas versiones, juntándolas, eliminándolas, etc
+	- Podemos incluir acceso a otros repositorios, en otros equipos y juntar sus versiones con las nuestras, tanto para usuarios con distintos equipos como grupos de usuarios. 
 	- Incluye opciones de seguridad para decidir que usuarios pueden cambiar algo o solo enviar código alternativo pendiente de comprobar.
-
-
-...
-
-
-
-
-
-
-FLUJOS DE TRABAJO EN GIT
-
-Existen varios flujos de trabajo que cada persona o grupo decide usar para que la coordinación entre 
-
-Entre los flujos de trabajo en Git más populares están Trunk Based Development y Git Flow. Uno se decanta por la forma estructural y el otro por la ligereza
-
-
-Cada persona o jefe elige una forma para introducir los datos, siguiendo las reglas básicas de git.
-
-Ejemplo con GITFLOW
-
-En este caso y como ejemplo vamos a presentar el método de flujo llamado gitflow que es más tradicional y nos permite ver el flujo con ramas que duran más tiempo.
-
-
-
-
-
