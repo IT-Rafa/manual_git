@@ -1,0 +1,13 @@
+FLUJOS DE TRABAJO EN GIT
+
+Existen varios flujos de trabajo que cada persona o grupo decide usar para que la coordinación entre 
+
+Entre los flujos de trabajo en Git más populares están Trunk Based Development y Git Flow. Uno se decanta por la forma estructural y el otro por la ligereza
+
+
+Cada persona o jefe elige una forma para introducir los datos, siguiendo las reglas básicas de git.
+
+Ejemplo con GITFLOW
+
+En este caso y como ejemplo vamos a presentar el método de flujo llamado gitflow que es más tradicional y nos permite ver el flujo con ramas que duran más tiempo.
+

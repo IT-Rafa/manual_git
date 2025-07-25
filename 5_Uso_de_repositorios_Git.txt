@@ -1,0 +1,78 @@
+USO DE REPOSITORIOS GIT
+
+Con git instalado y configurado, ya podemos crear nuestros repositorios git.
+Un término importante es que los repositorios Git son de dos tipos:
+
+	- Repositorios locales
+		Son carpetas donde tendremos nuestros datos, y que incluirá una carpeta oculta llamada .git, que se crea al convertir el repositorio a repositorio Git.
+		Estas carpetas son locales y podemos gestionar las versiones. En este caso no necesitamos acceso a otros equipos.
+		Si, por ejemplo, la misma persona codifica los datos en dos equipos distintos, tendrá dos repositorios locales. Para que se comuniquen, precisará de repositorios remotos
+		
+	- Repositorios remotos.
+		Los repositorios remotos son rutas a repositorios que están en otro equipo. En este caso obviamente debemos tener comunicación con esos equipos.
+		Estos otros repositorios tendrán los datos creados por otros usuarios o, incluso, del mismo usuario pero en otro equipo, con su propio repositorio local, independiente.
+		Normalmente, uno de los repositorios remotos, que sera usado como un repositorio central, será un repositorio bare.
+		Repositorio bare:
+			Los repositorios bare son creados solo para compartir versiones entre varios repositorios locales.
+			No permiten modificar el código directamente (No tienen Espacio de Trabajo. Hablaremos de esto en breve). 
+			Son almacenados en un servidor Git. Estos pueden ser:
+				- públicos (en la nube), como GitHub, GitLab (en versión nube), y Bitbucket 
+				- privados (auto hospedados), como GitLab, Gitea, y Forgejo.
+				
+			el usado el las páginas de GitHub,  y no permiten un acceso local directo. Solo Permiten actualizar la versión usando 
+
+
+
+INICIAR NUEVO REPOSITORIO GIT LOCAL
+
+Para crear un repositorio local, podemos crearlo directamente o hacer una copia de un repositorio remoto.
+
+INICIAR NUEVO REPOSITORIO GIT LOCAL MANUALMENTE
+
+Con git instalado, lo primero es convertir una carpeta, que será el repositorio de nuestro proyecto de software, a un repositorio git.
+Para eso podemos crear la carpeta directamente o usar un generador de proyectos con un IDE o las herramientas del programa.
+
+Con esa carpeta creada, entramos y, con la terminal, usamos la herramienta git init
+	git init
+
+Nos dará un mensaje informándonos:
+	Initialized empty Git repository in E:/source_dev/manuals/git/git_manual/carpeta/.git/
+
+Con esto ya tenemos un repositorio git, con su carpeta .git incluida, y una rama, creada por defecto, con el nombre main (en su momento se llamó master).
+Esta carpeta sigue funcionando como una carpeta normal, pero ahora es revisada por el programa git, con lo que podemos usar sus herramientas.
+
+HACER COPIA DE UN REPOSITORIO REMOTO
+
+Lo primero que necesitamos es tener la ruta de un proyecto git, que puede estar en nuestro equipo, una red local o internet.
+
+
+
+
+REPOSITORIO GIT
+
+Concretamente, este repositorio git es lo que llamamos un repositorio local.
+Tiene su subcarpeta .git incluida, y una rama, creada por defecto, con el nombre main.
+
+Los repositorios locales nos permiten modificar el proyecto localmente, es decir que los cambios se harán solo en nuestro equipo.
+
+Cada cambio que hagamos deber estar asignado a un usuario, como ya dijimos. Si no creaste el usuario, ve al capítulo Configurar git.
+
+Si queremos enviar nuestro código a otros repositorios (que para nosotros serán remotos) tenemos que incluir ramas remotas 
+
+
+
+Una herramienta de git muy útil es git status, que nos informa del estado actual del repositorio
+
+
+
+
+En git, los repositorios pueden ser locales o remotos.
+	- El repositorio local es en el cual podemos crear y modificar los archivos 
+	- Los repositorios remotos nos permiten tener los datos coordinados, ya sea en caso de varios usuarios, que nos envien una versión o arreglo,
+	o el mismo usuario que usa distintos equipos para hacer los cambios.
+	
+Para crear un repositorio local, podemos crearlo directamente o hacer una copia de un repositorio remoto.
+
+
+Dentro de esa carpeta abriremos un terminal e introducimos 
+git init
