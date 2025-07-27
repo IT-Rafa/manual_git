@@ -6,8 +6,10 @@ Este sistema nos da ayudas para gestionar el interior de una carpeta con opcione
 Para definir lo que hacer, em
 
 REPOSITORIO TRADICIONAL
+Un repositorio, o su abreviatura repo, es un almacén. Normalmente se refieren a almacenes digitales para trabajos científicos, conjuntos de datos o software.
 
-Normalmente una carpeta con un proyecto es lo que se denomina repositorio, o con su abreviatura repo. Esto nos permite guardar, eliminar, modificar y ordenar con carpetas, los archivos que introducimos, cada uno con su propio objetivo, como: 
+El sistema típico de un repo para un proyecto de software es una carpeta que tendrá la lista de archivos necesarios y ordenados, según su objetivo, usando sub-carpetas.
+Los archivos internos serán normalmente de los siguientes tipos:
 	- Archivos de código
 	- Configuración.
 	- Recursos varios
@@ -15,19 +17,25 @@ Normalmente una carpeta con un proyecto es lo que se denomina repositorio, o con
 	- Licencias
 	- Estilos
 	- etc.
-
+	
 Este carpeta la podemos crear manualmente, creando la carpeta y sus archivos, o usando programas, normalmente con herramientas del propio IDE´S o del propio lenguaje, que creará la carpeta, normalmente con una plantilla, creando los recursos necesarios para que el programa funcione.
 
-Este es el sistema básico para poder crear un proyecto, añadiendo los archivos que nos interesan, de forma ordenada, según las reglas del lenguaje que usemos y nuestra propia organización.
+Con esto tendremos una evolución lineal cronológica, sin posibilidad de volver atrás. Nos permite que el programa evolucione, pero no tenemos opción de ver las versiones antiguas del proyecto, ni hacer versiones alternativas en la misma carpeta.
 
-Con esto tendremos una evolución lineal cronológica, sin posibilidad de volver atrás, salvo que usemos copias de seguridad.
 Es decir, el proyecto podrá avanzar, pero solo tendremos una única versión con solo su último estado.
 
 
 REPOSITORIO CON VCS
 
-Cada VCS tiene sus opciones propias y su sistema de gestión, pero todos nos darán herramientas para cambiar el repositorio básico por otro que nos permitirán hacer cosas relacionadas con las versiones:
-	- Podemos ver un historial de la evolución del proyecto, y movernos entre ellos, sin modificar los estados posteriores, salve que queramos.
-	- Nos permite tener distintas versiones del proyecto a la vez en la misma carpeta y poder gestionar estas versiones, juntándolas, eliminándolas, etc
-	- Podemos incluir acceso a otros repositorios, en otros equipos y juntar sus versiones con las nuestras, tanto para usuarios con distintos equipos como grupos de usuarios. 
-	- Incluye opciones de seguridad para decidir que usuarios pueden cambiar algo o solo enviar código alternativo pendiente de comprobar.
+La idea de usar VCS es añadirle al repositorio tradicional opciones para ver las versiones antiguas e incluso hacer versiones independientes en esa misma carpeta.
+Cada VCS tiene sus opciones propias y su sistema de gestión, pero todos nos darán herramientas para poder gestionar las versiones.
+
+Normalmente sus mejoras, además de las que el repositorio normal nos ofrece, son:
+	- El historial:
+		Donde podemos elegir y ver las versiones antiguas, que se habrán hecho en su momento.
+	- Ramas o versiones alternativas.
+		Normalmente en la misma carpeta. Estas versiones estarán relacionadas unas con otras, pero serán independientes, salvo que queramos unirlas.
+	- Acceso a otros repositorios: 
+		Podemos incluir acceso a otros repositorios, en otros equipos y juntar sus versiones con las nuestras, tanto para usuarios con distintos equipos como grupos de usuarios. 
+	- Seguridad:
+		Incluye opciones de seguridad para decidir que usuarios pueden cambiar algo o solo enviar código alternativo pendiente de comprobar y cada cambio irá firmado por el correo del usuario.

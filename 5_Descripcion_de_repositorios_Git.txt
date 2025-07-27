@@ -14,25 +14,59 @@ Existen dos tipos de repositorios:
 	- Repositorios remotos.
 		Los repositorios remotos son rutas a repositorios que están en otro equipo. En este caso obviamente debemos tener comunicación con esos equipos.
 		Normalmente, uno de los repositorios remotos, que sera usado como un repositorio central, será un repositorio bare.
-		Los repositorios bare son creados solo para compartir versiones entre varios repositorios locales. No tienen opción para gestionar los archivos de forma interna, solo funcionan con las opciones de git.
+		Los repositorios bare:
+			son creados sólo para compartir versiones entre varios repositorios locales.
+			No tienen opción para gestionar los archivos de forma interna, solo funcionan con las opciones de git.
+			No tienen Working Directory (que veremos en breve)
 
 
 AREAS EN UN REPOSITORIO LOCAL GIT
 
-Los archivos en un repositorio están controlados dentro de la carpeta .git.
-Cada archivo tiene un estado según si se ha 
+
+Cuando entramos en un repositorio git, lo hacemos de la misma forma que accedemos a una carpeta.
+Solo sabremos que es git usando sus herramientas ( o con la carpeta .git, claro)
+Mientras que podemos trabajar como si fuera un repositorio tradicional, existen opciones mejoradas por git que podremos usar.
+Por lo pronto, cuando vemos el contenido de la carpeta, ya no vemos todo lo que hay dentro de la carpeta, sino solo el Working Directory, que nos muestra el contenido al que apunta ahora mismo.
+Veremos esto a continuación.
+
+WORKING DIRECTORY
+Esta zona está apuntando a una parte del contenido del proyecto. Normalmente es un commit que está asociado a una rama.
+Aún no conocemos la definición de commit y rama en git, así que vamos a explicar su definición brevemente:
+
+	- Las ramas (branches):
+		Cada rama (branch) es una versión del proyecto que estamos creando. 
+		Cada versión, incluso si creamos un repo git nuevo, usará una rama.
+		La rama por defecto de git es llamada con el nombre main. En versiones anteriores se usaba master.
+		Cada rama mantiene su propio historial de cambios (commits).
+		Para ver o cambiar de branch, usas estos comandos:
+			git checkout
+			git branch
+			
+		
+	- Un commit. 
+		Un commit (o cambio) es cada cambio guardado por el usuario en la historia en una rama o varias ramas.
+		Es similar a hacer una foto de tu proyecto en el estado actual, cada vez que evoluciona.
+		Cada commit está asignado a un usuario, con su propio email,, con lo que siempre se sabrá quien hizo cada parte.
+		Además cada commit tiene asignado un texto, que describe que se hizo, y un código de identidad, creado por git, de 40 dígitos hexadecimales.
+		Para crear un commit
+			- git add <archivo> : Con esto indicas los archivos que quieres añadir.
+			- git commit  -m "<descripción commit>" : Con esto creas el commit y le asignas una descripción. Este commit se asignará como parte de la rama en la que estés.
+			
+Por tanto, Working Directory siempre debe estar dirigido a un commit en una rama, y una vez que apunte a una rama, git muestra directamente los archivos asignados, según la base de datos de git, en la carpeta.
+
+Este puntero es el llamado HEAD (con letras mayúsculas) y apunta a uno de los posibles heads (en minúsculas)
 
 
 
+STAGING AREA
+
+es un archivo que almacena lo que irá en una confirmación (commit).
+Es también conocido como index.
+				
+GIT DIRECTORY
 
 
-
-
-
-
-
-
-	
+---------	
 		Si copiamos otro repositorio, que veremos en breve como se hace, tendremos un repositorio local con todos los datos en nuestro equipo.
 		Los repositorios locales dividen los archivos en tres zonas: 
 		
