@@ -9,19 +9,24 @@ Existen dos tipos de repositorios:
 
 	- Repositorios locales
 		Son las carpetas entramos y modificamos nuestros archivos. Incluyen una carpeta .git que almacena el estado de los archivos, indicando si git los tiene controlados, si hay versiones anteriores,
-		Estas carpetas son locales, y cada archivo se gestiona de forma local. Solo es válido en nuestro equipo
+		Estas carpetas son locales, y cada archivo se gestiona de forma local. Las acciones que realizemos serán solo válidas en nuestro repo.
+		Si queremos comunicarnos con otros repos, tendremos que incluir repositorios remotos.
 
 	- Repositorios remotos.
-		Los repositorios remotos son rutas a repositorios que están en otro equipo. En este caso obviamente debemos tener comunicación con esos equipos.
+		Los repositorios remotos son rutas a repositorios que están en otro equipo o directorio del mismo equipo.
+		En este caso, para tener acceso, obviamente debemos tener comunicación con esos equipos.
+		Estos otros repositorios tendrán los datos creados por otros usuarios o, incluso, del mismo usuario pero en otro equipo o directorio.
 		Normalmente, uno de los repositorios remotos, que sera usado como un repositorio central, será un repositorio bare.
 		Los repositorios bare:
 			son creados sólo para compartir versiones entre varios repositorios locales.
 			No tienen opción para gestionar los archivos de forma interna, solo funcionan con las opciones de git.
 			No tienen Working Directory (que veremos en breve)
+			Normalmente son almacenados en un servidor Git. Estos pueden ser:
+				- públicos (en la nube), como GitHub, GitLab (en versión nube), y Bitbucket 
+				- privados (auto hospedados), como GitLab, Gitea, y Forgejo.
 
 
 AREAS EN UN REPOSITORIO LOCAL GIT
-
 
 Cuando entramos en un repositorio git, lo hacemos de la misma forma que accedemos a una carpeta.
 Solo sabremos que es git usando sus herramientas ( o con la carpeta .git, claro)
@@ -29,11 +34,13 @@ Mientras que podemos trabajar como si fuera un repositorio tradicional, existen 
 Por lo pronto, cuando vemos el contenido de la carpeta, ya no vemos todo lo que hay dentro de la carpeta, sino solo el Working Directory, que nos muestra el contenido al que apunta ahora mismo.
 Veremos esto a continuación.
 
+
 WORKING DIRECTORY
+
 Esta zona está apuntando a una parte del contenido del proyecto. Normalmente es un commit que está asociado a una rama.
 Aún no conocemos la definición de commit y rama en git, así que vamos a explicar su definición brevemente:
 
-	- Las ramas (branches):
+	- RAMAS (branches):
 		Cada rama (branch) es una versión del proyecto que estamos creando. 
 		Cada versión, incluso si creamos un repo git nuevo, usará una rama.
 		La rama por defecto de git es llamada con el nombre main. En versiones anteriores se usaba master.
@@ -43,7 +50,7 @@ Aún no conocemos la definición de commit y rama en git, así que vamos a expli
 			git branch
 			
 		
-	- Un commit. 
+	- COMMIT. 
 		Un commit (o cambio) es cada cambio guardado por el usuario en la historia en una rama o varias ramas.
 		Es similar a hacer una foto de tu proyecto en el estado actual, cada vez que evoluciona.
 		Cada commit está asignado a un usuario, con su propio email,, con lo que siempre se sabrá quien hizo cada parte.
@@ -62,8 +69,11 @@ STAGING AREA
 
 es un archivo que almacena lo que irá en una confirmación (commit).
 Es también conocido como index.
-				
+
+
 GIT DIRECTORY
+
+Almacena los metadatos y la base de datos de objetos git.
 
 
 ---------	
@@ -73,46 +83,10 @@ GIT DIRECTORY
 		Rastrear Archivos Nuevos
 		Preparar Archivos Modificados
 		Ignorar Archivos
+		
 		Confirmar tus Cambios
 		Cambios Preparados y No Preparados
-			- Working directory (o directorio de trabajo)
-				Es una copia de una versión del proyecto
-				El contenido se saca de la base de datos en la carpeta .git y se colocan en disco para que los puedas usar o modificar.
-				Una vez que el archivo esté creado o modificado es almacenado en está zona.
-				Seguirá en ella mientras no cambiemos de rama.
-				Para que quede almacenado de forma fija le indicamos a git que lo consideramos válido para incluir en el siguiente paso de la versión que estemos manipulando.
-				
-				
-			- Staging area (área de almacenamiento o preparación)
-				es un archivo que almacena lo que irá en una confirmación (commit).
-				Es también conocido como index.
-
-			- git directory  (directorio de Git)
-				Almacena los metadatos y la base de datos de objetos git.
-
-
-
-
-			(o El directorio de Git (Git directory), el directorio de trabajo (working directory), y el área de almacenamiento (staging area).
-			- Staging area
-			- git directory
-			- Área de Preparación
 		
-	- Repositorios remotos.
-		Los repositorios remotos son rutas a repositorios que están en otro equipo. En este caso obviamente debemos tener comunicación con esos equipos.
-		Estos otros repositorios tendrán los datos creados por otros usuarios o, incluso, del mismo usuario pero en otro equipo. Cada uno tendrá su propio repositorio local.
-		Normalmente, uno de los repositorios remotos, que sera usado como un repositorio central, será un repositorio bare.
-		
-		Repositorio bare:
-			Los repositorios bare son creados solo para compartir versiones entre varios repositorios locales.
-			No permiten modificar el código directamente (No tienen Espacio de Trabajo. Hablaremos de esto en breve). 
-			Son almacenados en un servidor Git. Estos pueden ser:
-				- públicos (en la nube), como GitHub, GitLab (en versión nube), y Bitbucket 
-				- privados (auto hospedados), como GitLab, Gitea, y Forgejo.
-				
-			el usado el las páginas de GitHub, y no permiten un acceso local directo. Solo Permiten actualizar la versión usando 
-
-
 
 INICIAR NUEVO REPOSITORIO GIT LOCAL
 

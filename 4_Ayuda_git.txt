@@ -26,6 +26,7 @@ Nos mostrará información más precisa de git config, dividida en:
 
 
 INSTRUCCIÓN DE LINUX man	
+
 En Linux tendremos la clásica información en su herramienta interna man:
 Por ejemplo, si queremos conocer la información de git config, escribimos:
 	man git-config
