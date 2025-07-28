@@ -1,0 +1,90 @@
+CREACIÓN DE UN REPOSITORIO GIT LOCAL
+
+Para crear un repositorio local, podemos crearlo directamente o hacer una copia de un repositorio remoto.
+
+
+INICIAR NUEVO REPOSITORIO GIT LOCAL MANUALMENTE
+
+Con git instalado, lo primero es convertir una carpeta, que será el repositorio de nuestro proyecto de software, a un repositorio git.
+Para eso podemos crear la carpeta directamente o usar un generador de proyectos con un IDE o las herramientas del programa.
+
+Con esa carpeta creada, entramos y, con la terminal, usamos la herramienta git init
+	git init
+
+Nos dará un mensaje informándonos:
+	Initialized empty Git repository in E:/source_dev/manuals/git/git_manual/carpeta/.git/
+
+Con esto ya tenemos un repositorio git, con su carpeta .git incluida, y una rama, creada por defecto, con el nombre main (en su momento se llamó master).
+Esta carpeta sigue funcionando como una carpeta normal, pero ahora es revisada por el programa git, con lo que podemos usar sus herramientas.
+
+HACER COPIA DE UN REPOSITORIO REMOTO
+
+Lo primero que necesitamos es tener la ruta de un proyecto git, que puede estar en nuestro equipo, una red local o internet.
+
+
+
+
+
+
+
+
+---------	
+		Si copiamos otro repositorio, que veremos en breve como se hace, tendremos un repositorio local con todos los datos en nuestro equipo.
+		Los repositorios locales dividen los archivos en tres zonas: 
+		
+		Rastrear Archivos Nuevos
+		Preparar Archivos Modificados
+		Ignorar Archivos
+		
+		Confirmar tus Cambios
+		Cambios Preparados y No Preparados
+		
+
+INICIAR NUEV
+
+
+
+
+GIT STATUS
+
+Una herramienta muy útil para ver donde estamos y el estado actual de los archivos, es git status.
+	git status
+		On branch main
+		Your branch is up to date with 'origin/main'.
+		
+		nothing to commit, working tree clean
+		
+Si vemos la salida, asumiremos varias cosas:
+	On branch main
+		Nos indica la rama en la que estamos. En este caso main, que es la rama por defecto.
+		
+	Your branch is up to date with 'origin/main'.
+		En este caso, tenemos un repositorio remoto, que se llama origin, y que tiene una rama, también llamada main.
+		El mensaje nos indica que los commits de nuesta rama y la rama remota están coordinados.
+		
+	nothing to commit, working tree clean
+		Este mensaje nos indica que no hay archivos que hayan cambiado desde el último commit.
+
+
+
+
+
+
+
+
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   0_indice.txt
+        modified:   1_Descripcion_VCS.txt
+        modified:   5_Descripcion_de_repositorios_Git.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        5_Inicio_de_repositorios_local_Git.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
