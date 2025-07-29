@@ -1,0 +1,17 @@
+HERRAMIENTAS DE GIT
+A estas alturas deberiamos tener dos repositorios locales de git
+	- El primero, hecho de forma manual. Sin ningún repositorio remoto
+	- El segundo, haciendo un clon del primero, en el mismo equipo. Con un repositorio remoto, que es el primero.
+	
+Con esto, vamos a usar algunas herramientas de git que nos permitirán hacer varias cosas básicas.
+	
+	
+GIT STATUS
+
+Esta herramienta es la que nos informa del estado actual, principalmente de Working Directory, indicandonos la rama, los archivos pendientes de gestión y la relación con las ramas remotas
+
+GIT LOG
+
+
+Vamos a usar otras herramientas de git útiles, que por ahora no nos darán mucha información, ya que no hicimos nada,. 
+Normalmente suele se útil saber que ocurre en estos casos y git nos informa normalmente de forma clara.

@@ -1,21 +1,76 @@
 CREACIÓN DE UN REPOSITORIO GIT LOCAL
 
-Para crear un repositorio local, podemos crearlo directamente o hacer una copia de un repositorio remoto.
+La herramienta git debe estar instalada en el equipo.
 
+Para crear un repositorio local existen dos opciones:
+	- Podemos crearlo directamente
+		- Creando una carpeta
+		- Iniciando esa carpeta como repositorio git
+		
+	- Hacer una copia de un repositorio remoto en otro lugar
+		- Tendremos los datos originales
+		- Tendremos un repositorio remoto, que será la ruta al repositorio original.
+		
 
 INICIAR NUEVO REPOSITORIO GIT LOCAL MANUALMENTE
 
-Con git instalado, lo primero es convertir una carpeta, que será el repositorio de nuestro proyecto de software, a un repositorio git.
-Para eso podemos crear la carpeta directamente o usar un generador de proyectos con un IDE o las herramientas del programa.
+Crear carpeta.
+	Con el modo tradicional:
+		Creamos una carpeta usando las opciones que nos da el dispositivo (con entorno gráfico, con términal, etc).
 
-Con esa carpeta creada, entramos y, con la terminal, usamos la herramienta git init
-	git init
+	Usando un programa:
+		Algunos IDE´s, o herramientas de programación, nos permiten crear una carpeta para el proyecto, adaptado al IDE o al lenguaje de programación que usemos.
+		Normalmente se incluyen plantillas para especificar los elementos básicos que queremos.
+	
+Iniciamos git en esa carpeta.
+	Accedemos a esa carpeta con un terminal y ejecutamos la instrucción git init
+		git init
 
-Nos dará un mensaje informándonos:
-	Initialized empty Git repository in E:/source_dev/manuals/git/git_manual/carpeta/.git/
+	Nos dará un mensaje informándonos, según el caso:
+		Carpeta tradicional, que se convirtió en repo git correctamente:
+			Initialized empty Git repository in E:/source_dev/manuals/git/git_manual/carpeta/.git/
+		Carpeta que ya es un repositorio git. Aparentemente no hace nada:
+			Reinitialized existing Git repository in E:/source_dev/manuals/manual_git/.git/
 
-Con esto ya tenemos un repositorio git, con su carpeta .git incluida, y una rama, creada por defecto, con el nombre main (en su momento se llamó master).
-Esta carpeta sigue funcionando como una carpeta normal, pero ahora es revisada por el programa git, con lo que podemos usar sus herramientas.
+Con esto ya tenemos un repositorio git, con su carpeta .git incluida, y una rama, creada por defecto, con el nombre main.
+
+
+
+COPIAR UN REPOSITORIO REMOTO DE GIT A REPO LOCAL
+
+Lo primero es tener una ruta a un repositorio remoto
+
+Usamos git clone
+
+Si usamos git init, nos informará que el archivo ya está inicializado para git.
+	Mensaje mostrado: Reinitialized existing Git repository in E:/source_dev/manuals/manual_git/.git/
+
+
+INFORMACIÓN DEL ESTADO DE Working Directory - git status
+
+Lo primero que vamos a hacer es revisar su contenido, que básicamente estará vacío, pero podremos ver algunos datos relevantes.
+Para esto usaremos git status, que nos informará del estado actual.
+	git status
+	
+	Nos dará un mensaje:
+		On branch main
+
+		No commits yet
+
+El primer mensaje nos indica la rama en la que estamos, que será main.
+El segundo mensaje nos indica que no existe ningún commit hecho todavía.
+
+Vamos a usar otras herramientas de git útiles, que por ahora no nos darán mucha información, ya que no hicimos nada,. 
+Normalmente suele se útil saber que ocurre en estos casos y git nos informa normalmente de forma clara.
+
+HISTORIAL DE LOS COMMITS DE LA RAMA - git log
+	- git log
+	Nos dará un mensaje:
+		fatal: your current branch 'main' does not have any commits yet
+	Simplemente nos dirá que ocurrió un error fatal, ya que no hay ningún commit.
+
+
+
 
 HACER COPIA DE UN REPOSITORIO REMOTO
 

@@ -1,6 +1,6 @@
 DESCRIPCIÓN DE REPOSITORIOS GIT
 
-En breve empezaremos a crear y manejar cada repositorio, pero antes vamos a hacer una descripción de los tipos de repositorios y donde están y como se organizan los archivos.
+En breve empezaremos a crear y manejar cada repositorio, pero antes vamos a hacer una descripción de los tipos de repositorios y que contienen.
 
 
 TIPOS DE REPOSITORIOS GIT
@@ -8,12 +8,12 @@ TIPOS DE REPOSITORIOS GIT
 Existen dos tipos de repositorios:
 
 	- Repositorios locales
-		Son las carpetas entramos y modificamos nuestros archivos. Incluyen una carpeta .git que almacena el estado de los archivos, indicando si git los tiene controlados, si hay versiones anteriores,
-		Estas carpetas son locales, y cada archivo se gestiona de forma local. Las acciones que realizemos serán solo válidas en nuestro repo.
+		Son las carpetas tipicas que, contienen una subcarpeta .git con la información del estado de los archivos.
+		Estas carpetas son locales, y por tanto la gestión de los archivos y del estado en git, será solo a nivel local. Serán solo válidas en nuestro repo.
 		Si queremos comunicarnos con otros repos, tendremos que incluir repositorios remotos.
 
 	- Repositorios remotos.
-		Los repositorios remotos son rutas a repositorios que están en otro equipo, o directorio, del mismo equipo.
+		Los repositorios remotos son rutas a repositorios que están en otro equipo u otro directorio directorio en el mismo equipo.
 		En este caso, para tener acceso, obviamente debemos tener comunicación con esos equipos.
 		Estos otros repositorios tendrán los datos creados por otros usuarios o, incluso, del mismo usuario pero en otro equipo o directorio.
 		Normalmente, uno de los repositorios remotos, que sera usado como un repositorio central, será un repositorio bare.
@@ -29,20 +29,10 @@ Existen dos tipos de repositorios:
 VISUALIZACIÓN DE UN REPOSITORIO LOCAL GIT
 
 Cuando accedemos a un repositorio git, lo hacemos igual que una carpeta, y su contenido parece ser similar, pero realmente solo estamos viendo una parte del repostorio.
-La forma de saber si realmente es un repositorio git es con las herramientas de git, o viendo que tiene un directorio .git oculto.
+Lo que estamos viendo no es el contenido total de la carpeta, sino un zona que nos muestra un contenido concreto, según a donde esté apuntando.
+Lo que realmente vemos es una rama y dentro de esa rama un control de archivos que serán relativos a un commit que hicimos.
 
-
-
-
-ÁREAS DE GIT
-
-
-WORKING DIRECTORY
-
-Lo que estamos viendo es realmente una de las áreas usadas por el repositorio local de git: el Working Directory.
-
-Esta zona está apuntando a una parte del contenido git del proyecto. Normalmente es un commit (registro de los cambios) que está asociado a una branch (rama).
-Expliquemos que quiere decir cada cosa:
+Aunque resultará mas fácil de entender cuando hagamos prácticas con ellos, explicaremos estos términos para tener una idea general:
 
 	- branch (rama):
 		Un proyecto puede tener varias ramas. Cada una es una versión, con un objetivo distinto, del proyecto que estamos creando. 
@@ -57,49 +47,42 @@ Expliquemos que quiere decir cada cosa:
 		Un commit (o registro de cambio) almacena los archivos que el usuario le fué indicando.
 		Este commit puede estar en una o varias ramas.
 		Es similar a hacer una foto de tu proyecto en el estado actual, cada vez que evoluciona.
-		Cada commit está asignado a un usuario, con su propio email,, con lo que siempre se sabrá quien hizo cada parte.
-		Además cada commit tiene asignado un texto, que describe que se hizo, y un código de identidad, creado por git, de 40 dígitos hexadecimales.
-		Para crear un commit
-			- git add <archivo> : Con esto indicas los archivos que quieres añadir.
-			- git commit  -m "<descripción commit>" : Con esto creas el commit y le asignas una descripción. Este commit se asignará como parte de la rama en la que estés.
+		Cada commit está asignado a un usuario, con su propio email, con lo que siempre se sabrá quien hizo cada parte.
+		Además cada commit tiene asignado un texto, que describe que se hizo, y un código de identidad, creado por git, de 40 dígitos hexadecimales (hash SHA-1).
 
-	- ESTADO DE ARCHIVOS NO REGISTRADOS
-		Esto nos indica los estados de los archivos, tanto nuevos, eliminados o cambiados, que ya no coinciden con el commit previo.
-			Commited (confirmado)
-			Modified (modificado)
-			Staged (preparado)
-
-Por tanto, Working Directory siempre debe estar dirigido a un commit en una rama, y una vez que apunte a una rama, git muestra directamente, en la carpeta, los archivos asignados, usando otra área de git llamada GIT DIRECTORY, una base de datos donde está guardados.
-
-Para que Working Directory guarde a donde apunta, se usa un puntero.
-Este puntero es el llamado HEAD (con letras mayúsculas) y apunta a uno de los posibles identificadores de commits, llamados heads (en minúsculas)
-
-El resto de áreas son información que veremos a través de de las herramientas de git.
+	- Gestión de los archivos conforme al commit
+		Esto nos indica los estados de los archivos en relación con el commit previo.
+			- Commited (confirmado) : Esto indica que el archivo es parte del commit previo. Está guardado de forma segura en el repositorio local.
+			- Modified (modificado) : Nos indica que este archivo es parte del commit previo, pero se ha mofidicado y no es parte de la lista de archivos a confirmar (Staged Area)
+			- Staged (preparado) : Nos indica que este archivo es parte del commit previo, se ha mofidicado y ya está incluido en la lista de archivos a confirmar (Staged Area)
 
 
-STAGING AREA
+ÁREAS DE GIT
 
-Está área gestiona los archivos que vas a añadir al siguiente commit. justo después de usar git add <archivo>
-Almacena lo que irá en el siguiente commit que crees.
+Como hemos indicado, lo que vemos en el repo git no es el contenido de una carpeta, sino solo parte.
+Para gestinar, y modificar cada parte es importante comprender las áreas de git donde se almacena y gestiona cada información de git.
 
-Es también conocido como index.
+Git tiene tres, o cuatro áreas, si tenemos un repositorio remoto, que se comunicarán entre si:
 
+	- Working Directory
+		Esto es lo que realmente vemos al entrar en la carpeta.
+		Muestra los archivos relativos a un commit y una rama, incluyendo los archivos pendientes de gestionar.
+		Su puntero especial que indica donde está, se llama HEAD (en mayúsculas), e indica el commit y la rama a la que apunta en cada momento.
+		Si cambias la dirección del puntero, los archivos pendientes serán eliminados. git te infomará de esto, si ocurre.
+		Puede apuntar a los identificadores de los distintos commits que existan, llamados (head, en minúsculas), indicando tambíen la rama.
+		
+	- Staging AREA
+		Esta es una zona temporal.
+		Cuando uno de los archivos va a ser parte del siguiente commit, se introducirá aquí.
+		Es también conocido como index.
 
-LOCAL REPOSITORY (INSIDE .GIT DIRECTORY)
+	- Local Repository
+		Almacena los metadatos y la base de datos de objetos git de tu repositorio local.
+		Guarda la información de cada commit, con sus archivos relacionados.
+		Cuando Working Directory cambia a una nueva dirección, el contenido a mostrar será sacado de aquí.
+		
+	- Remote Repository
+		Esto solo será creado si existe un repositorio remoto, y contendrá los datos de ese otro repositorio.
+		Se intentarán sincronizar para que, al conectarse, ambos tengan los mismos datos. Si no es posible git te informará del problema.
+		
 
-Almacena los metadatos y la base de datos de objetos git.
-
-
-REMOTE REPOSITORY
-
-
-
-RESUMEN CON LOS TÉRMINOS
-
-Ahora que conocemos los términos importantes de git, aunque no las instrucciones, podemos ver como funciona.
-
-Pongamos que tenemos EXISTE UN REPOSITORIO EN GITHUB con DOS RAMAS, llamada MAIN (que es la usada por defecto) y PACO.
-
-Si queremos ver y cambiar ese código, podemos CLONAR EL REPOSITORIO, creando un repositorio local, basado en el remoto.
-
-Si entramos en ese repositoro local, como con cualquier carpeta, veremos unos datos
