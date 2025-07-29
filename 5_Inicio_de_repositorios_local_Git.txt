@@ -1,37 +1,40 @@
 CREACIÓN DE UN REPOSITORIO GIT LOCAL
 
-La herramienta git debe estar instalada en el equipo.
+Evidentemente necesitamos tener instalado git para crear un repositorio.
 
-Para crear un repositorio local existen dos opciones:
-	- Podemos crearlo directamente
+Existen dos formas para crear un repositorio local:
+
+	- Podemos crear un repo local de forma manual
 		- Creando una carpeta
-		- Iniciando esa carpeta como repositorio git
-		
-	- Hacer una copia de un repositorio remoto en otro lugar
-		- Tendremos los datos originales
-		- Tendremos un repositorio remoto, que será la ruta al repositorio original.
-		
-
-INICIAR NUEVO REPOSITORIO GIT LOCAL MANUALMENTE
-
-Crear carpeta.
-	Con el modo tradicional:
-		Creamos una carpeta usando las opciones que nos da el dispositivo (con entorno gráfico, con términal, etc).
-
-	Usando un programa:
-		Algunos IDE´s, o herramientas de programación, nos permiten crear una carpeta para el proyecto, adaptado al IDE o al lenguaje de programación que usemos.
-		Normalmente se incluyen plantillas para especificar los elementos básicos que queremos.
-	
-Iniciamos git en esa carpeta.
-	Accedemos a esa carpeta con un terminal y ejecutamos la instrucción git init
-		git init
-
-	Nos dará un mensaje informándonos, según el caso:
-		Carpeta tradicional, que se convirtió en repo git correctamente:
-			Initialized empty Git repository in E:/source_dev/manuals/git/git_manual/carpeta/.git/
-		Carpeta que ya es un repositorio git. Aparentemente no hace nada:
-			Reinitialized existing Git repository in E:/source_dev/manuals/manual_git/.git/
-
+			- En mi caso, desde un sistema Windows, estaremos en una ruta donde están los proyectos de software:
+				La ruta completa: E:\source_dev\manuals>
+			Ahí creamos una carpeta nueva llamada my_repo_git, usando el terminal
+				mkdir PACO
+		- Accedemos a esa carpeta, desde el terminal:
+			cd PACO
+			
+		- Ahora convertimos la carpeta en un repo de git
+			git init
+			
+	- Podemos hacer una copia de otro repositorio, que nos permitirá tener un repo local con sus datos:
+		- Para hacer esto usaremos la instrucción git clone, y necesitamos una ruta a ese repositorio.
+			Esto puede hacerse de varias formas:
+			- Si el repo esta en nuestro propio equipo, podemos usar la ruta del sistema.
+				- Por ejemplo vamos a copiar el repo que hicimos de forma manual, en el apartado anterior.
+					- Según lo que hemos hecho, seguramente estaremos dentro del repositorio que creamos.
+					- Volvemos a la carpeta anterior para salir de ese repositorio.
+						cd ..
+				- Ahora copiamos ese repositorio a otro con git clone
+					git clone .\manual_git\ manual_git_clone
+					
+					En este caso, como el repositorio loca está en la misma carpeta, le damos un nombre nuevo, para que no nos de error por tener dos carpetas con el mismo nombre:
+						Tras la instrucción, git clone,
+						incluimos la ruta relativa al repositorio origen, .\manual_git\.
+						y después un espacio y el nuevo nombre del repositorio:  manual_git_clone
+				- Ahora podemos entrar en este repositorio local
+					cd  manual_git_clone
+			
+			
 Con esto ya tenemos un repositorio git, con su carpeta .git incluida, y una rama, creada por defecto, con el nombre main.
 
 
@@ -45,6 +48,7 @@ Usamos git clone
 Si usamos git init, nos informará que el archivo ya está inicializado para git.
 	Mensaje mostrado: Reinitialized existing Git repository in E:/source_dev/manuals/manual_git/.git/
 
+Con esto ya tenemos un repositorio git, con su carpeta .git incluida, las ramas que estén incluidas en el original, sus commits, y también una ruta al repositorio remoto original.
 
 INFORMACIÓN DEL ESTADO DE Working Directory - git status
 

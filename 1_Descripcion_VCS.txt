@@ -40,4 +40,4 @@ Normalmente sus mejoras, además de las que el repositorio normal nos ofrece, so
 	- Seguridad:
 		Incluye opciones de seguridad para decidir que usuarios pueden cambiar algo o solo enviar código alternativo pendiente de comprobar y cada cambio irá firmado por el correo del usuario.
 
-En nuestro caso, usaremos git para gestionar proyectos de software, pero vale para cualquier proyecto donde interese ver las versiones anteriores o tener versiones alternativas.
+En nuestro caso, usaremos git para gestionar proyectos de software, pero vale para cualquier proyecto donde sea importante acceder a una versión antigua, o tener versiones alternativas.
