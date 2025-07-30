@@ -1,14 +1,21 @@
 DESCRIPCIÓN DE GIT
 
 Git es un sistema para el control de versiones (En inglés: Version Control System o VCS) distribuido, gratuito y de código abierto y creado por Linus Torvalds en 2005
-Este sistema nos da ayudas para gestionar el interior de una carpeta con opciones útiles para controlar las distintas versiones.
 
-Para definir lo que hacer, em
+Git nos permite convertir una carpeta normal con un proyecto, al que también le podemos llamar repositorio, a un repositorio git, con mejoras para la gestión de versiones.
 
-REPOSITORIO TRADICIONAL
-Un repositorio, o su abreviatura repo, es un almacén. Normalmente se refieren a almacenes digitales para trabajos científicos, conjuntos de datos o software.
+Normalmente, una carpeta, o repositorio normal, solo almacena una versión del proyecto y solo existe el último estado.
 
-El sistema típico de un repo para un proyecto de software es una carpeta que tendrá la lista de archivos necesarios y ordenados, según su objetivo, usando sub-carpetas.
+Sin embargo, en un repositorio git podemos tener varias versiones del proyecto.
+Cada versión será asignada a una rama (branch), que tendrá un nombre asignado.
+
+Además, en cada rama, existirán distintos registros de los archivos incluidos en el proyecto según este avanza. Estos registros son llamados commits.
+Cada commit estará definido por un usuario e incluirá, tanto el usuario que lo creó, con su email, como una descripción en texto y un identificador propio y único.
+
+
+Este sistema está pensado para almacenar cualquier tipo de datos que vayan evolucionando. Podemos almacenar datos de libros, los archivos de los diseños, etc.
+
+En nuestro caso nos centraremos en los proyectos de software.
 Los archivos internos serán normalmente de los siguientes tipos:
 	- Archivos de código
 	- Configuración.
@@ -17,8 +24,14 @@ Los archivos internos serán normalmente de los siguientes tipos:
 	- Licencias
 	- Estilos
 	- etc.
-	
-Este carpeta la podemos crear manualmente, creando la carpeta y sus archivos, o usando programas, normalmente con herramientas del propio IDE´S o del propio lenguaje, que creará la carpeta, normalmente con una plantilla, creando los recursos necesarios para que el programa funcione.
+
+--------------
+
+
+
+Este carpeta la podemos crear manualmente, creando la carpeta y sus archivos, o usando programas.
+Las herramientas del propio IDE´S o incluso en algunos lenguajes, nos permiten  crear una carpeta, basándose en una plantilla, que crea los recursos necesarios para que el programa funcione.
+
 
 Con esto tendremos una evolución lineal cronológica, sin posibilidad de volver atrás. Nos permite que el programa evolucione, pero no tenemos opción de ver las versiones antiguas del proyecto, ni hacer versiones alternativas en la misma carpeta.
 

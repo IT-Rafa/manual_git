@@ -9,21 +9,16 @@ Un repositorio es la ubicación principal de un proyecto.
 		- Estilos
 		- etc.
 		
-Un repositorio git, además de lo indicado, permite que la carpeta pueda almacenar distintas versiones (commits)., 
-con archivos nuevos o modificados, y poder ver las distintas versiones almacenadas sin mezclar cada versión 
-o formato del proyecto o parte del proyecto.
+Un repositorio git, además de lo indicado, permite que la carpeta pueda almacenar distintas versiones (commits)., con archivos nuevos o modificados, y poder ver las distintas versiones almacenadas sin mezclar cada versión o formato del proyecto o parte del proyecto.
 
-Esto nos permite probar una forma nueva de manejar algo sin cambiar la versión anterior, permitiendo que las versiones no 
-se sobrescriban.
+Esto nos permite probar una forma nueva de manejar algo sin cambiar la versión anterior, permitiendo que las versiones no se sobrescriban.
 
-Además puedes tener distintas versiones guardadas con el mismo código y desplegar el código automáticamente con 
-CI o CD
+Además puedes tener distintas versiones guardadas con el mismo código y desplegar el código automáticamente con CI o CD
 
-Ese historial se guarda en una carpeta oculta, llamado .git 
+Ese historial se guarda en una carpeta oculta, llamado .git.
 
 Repositorio Remoto.
-Normalmente, existe un repositorio central, guardado en internet a través de un servidor git, como Github, GitLab, etc o repositorios 
-privados. 
+Normalmente, existe un repositorio central, guardado en internet a través de un servidor git, como Github, GitLab, etc o repositorios privados.
 
 Repositorio local
 Cada persona tiene un repositorio privado, almacenado de forma local en su propio equipo, y donde hace las modificaciones
