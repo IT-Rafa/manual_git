@@ -1,0 +1,70 @@
+DESCRIPCIÓN DE GIT
+
+Git es un sistema para el control de versiones (En inglés: Version Control System o VCS).
+Es distribuido, gratuito y de código abierto.
+Fué creado por Linus Torvalds en 2005.
+
+
+REPOSITORIO DIGITAL TRADICIONAL
+
+Los repositorios son usados como almacenes.
+En nuestro caso, hablamos de repositorios digitales, que almacenan una lista de archivos, y nos centraremos en los proyectos de software.
+
+Los archivos internos serán normalmente de los siguientes tipos:
+	- Archivos de código
+	- Configuración.
+	- Recursos varios
+	- Documentación
+	- Licencias
+	- Estilos
+	- etc.
+
+
+En cualquier sistema operativo normalmente usamos carpetas donde guardamos cada proyecto.
+Cada repositorio solo guarda una versión del proyecto y de esa versión solo existe el acceso al último cambio hecho. No podemos acceder a una versión antigua, salvo que hagamos copias de seguridad, o similar.
+
+Este sistema está pensado para almacenar cualquier tipo de datos que vayan evolucionando. Podemos almacenar datos de libros, los archivos de los diseños, etc.
+
+Este carpeta la podemos crear manualmente, creando la carpeta y sus archivos, o usando programas.
+Las herramientas del propio IDE´S o incluso en algunos lenguajes, nos permiten  crear una carpeta, basándose en una plantilla, que crea los recursos necesarios para que el programa funcione.
+
+
+REPOSITORIO DE GIT
+
+Git nos permite convertir una carpeta normal a un repositorio tipo git.
+
+En un repositorio git podemos tener varias versiones distintas del proyecto, cada una con su objetivo, y cada versión tendrá varios registros de los cambios, a los que podemos acceder cuando queramos.
+
+
+BRANCH, QUE ES UNA RAMA CON UNA VERSIÓN
+
+Las distintas versiones se almacenarán en distintas ramas (Branch) y tendrán un nombre asignado.
+
+
+COMMIT, QUE ES UN REGISTRO DE LOS CAMBIOS
+
+También los registros de camios se irán almacenando, según el usuario considere. Estos registros, llamados commits, estarán asignados a un usuario, con su email asignado, con una descripción en texto y un identificador único, creado por git.
+
+
+REPOSITORIO DE GIT LOCAL
+
+Todos los cambios que hagamos se harán en nuestro repositorio de forma local, de forma que se harán rápidamente.
+
+
+REPOSITORIO REMOTO
+
+Si queremos compartir el código, o simplemente usar varios equipos para codificar, podemos usar repositorios remotos donde tendremos comunicación con esos repositorios y podremos intercambiar el código.
+
+
+SEGURIDAD
+
+La comunicación se hará enviando los commits, y estos siempre irán firmados por el usuario que lo haya escrito.
+
+Esto nos permite que cada cambio pueda ser asignado, o quedar pendiente de revisión, según como configuremos nuestro repositorio.
+
+
+REPOSITORIO GIT CENTRAL
+
+Normalmente uno de los repositorios remotos es usado como el repositorio central, donde será el destino final de los archivos añadidos.
+
+Este repositorio suele ser solo para las comunicaciones con git y no permite hacer los cambios de forma local.
