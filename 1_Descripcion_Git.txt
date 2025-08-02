@@ -2,16 +2,21 @@ DESCRIPCIÓN DE GIT
 
 Git es un sistema para el control de versiones (En inglés: Version Control System o VCS).
 Es distribuido, gratuito y de código abierto.
-Fué creado por Linus Torvalds en 2005.
+Fue diseñado por Linus Torvalds en 2005.
+
+Su funcionamiento nos permite tener varias versiones de un proyecto, dentro de la misma carpeta.
+Cada versión tendrá su propio contenido, e incluirán los registros de los cambios que el usuario vaya creando.
+
+Esto incluye la coordinación del trabajo de varias personas para que puedan modificar el proyecto, añadiendo a cada versión la parte de código que hayan añadido.
 
 
-DEFINICIÓN DE REPOSITORIO DIGITAL SSOO
+DEFINICIÓN DE REPOSITORIO
 
 La definición de repositorio es un lugar donde se guarda algo.
-Esta palabra es usada normalmente para los repositorios digitales que almacenan trabajos científicos, conjuntos de datos o software.
+Este término suele usarse para almacenar varios  almacenan trabajos científicos, conjuntos de datos o software.
 
-En nuestro caso nos interesa almacenar proyectos de software.
-Mientras que el este sistema y los repositorios de git valen para almacenar otros proyectos, en nuestro caso nos interesan los proyectos de software.
+En nuestro caso, el repositorio, o su abreviatura repo, es de tipo digital, y normalmente se usa una carpeta para almacenar los datos.
+Esa carpeta es lo que nosotros llamamos repositorio y los datos a guardar serán proyectos de software.
 
 Estos proyectos normalmente contienen los siguientes tipos de archivos:
 	- Archivos de código
@@ -22,45 +27,58 @@ Estos proyectos normalmente contienen los siguientes tipos de archivos:
 	- Estilos
 	- etc.
 
+Normalmente el sistema operativo usa una carpeta para guardar el último cambio de una sola versión de un  proyecto. No podemos acceder a una versión antigua, salvo que hagamos copias de seguridad, o similar.
 
-REPOSITORIO DIGITAL SEGÚN EL SSOO
-
-En cualquier sistema operativo normalmente usamos una carpeta donde guardamos cada proyecto. Esa carpeta es, en nuestro caso, un repositorio o repo.
-
-Cada repositorio solo guarda una versión del proyecto y de esa versión solo existe el acceso al último cambio hecho. No podemos acceder a una versión antigua, salvo que hagamos copias de seguridad, o similar.
-
-Para crear una carpeta de un proyecto, la podemos crear manualmente, creando la carpeta y sus archivos, o usando programas incluidas en el IDE o algunos programas de lenguaje, que nos permite crear una proyecto, basándose en una plantilla, que crea los recursos necesarios, dentro de una carpeta.
+Estas carpetas podemos crearlas manualmente, creando la carpeta y sus archivos.
+Otra opción es el uso de programas de lenguaje, o herramientas incluidas en el IDE, que nos permite crear una proyecto, basándose en una plantilla, que crea los recursos necesarios, dentro de una carpeta.
 
 
 REPOSITORIO DE GIT
 
 Git nos permite convertir una carpeta normal a un repositorio tipo git.
 
-En un repositorio git, la carpeta contiene un directorio oculto, llamado .git, que contendrá la información de las otras posibles versiones.
+En un repositorio git, la carpeta incluye un directorio oculto, llamado .git, que contendrá la información necesaria para guardar las otras posibles versiones.
 
-Cuando veamos los archivos de la carpeta, solo mostrará los archivos que pertenezcan a un registro (commit) de una rama (versión).
-Si cambiamos de rama, esos archivos en la carpeta pueden, o no, ser distintos, dependiendo de cuando los guardemos.
+En su versión original, cada carpeta muestra todo su contenido, usando sus herramientas, pero si la carpeta es convertida a Git, está mostrará solo el contenido de un 
+registro de cambios, que pertenecerá a una versión del proyecto.
+Es el usuario el que decidirá tanto la versión como el registro que quiere ver.
 
-Esto nos permite tener varias versiones, guardadas en ramas, cada una con sus registros de cambios, llamados commits, y la carpeta estará apuntando uno de estos commits, con los cambios que se hicieron ahí en cada momento.
-
-
-BRANCH, QUE ES UNA RAMA CON UNA VERSIÓN
-
-Las distintas versiones se almacenarán en distintas ramas (Branch) y tendrán un nombre asignado.
+Esto será más fácil de entender cuando vayamos a la práctica, pero por ahora vamos a explicar estos términos que git usará de forma común.
 
 
-COMMIT, QUE ES UN REGISTRO DE LOS CAMBIOS
+BRANCHES - LAS VERSIONES SE ALMACENAN EN RAMAS
 
-También los registros de camios se irán almacenando, según el usuario considere. Estos registros, llamados commits, estarán asignados a un usuario, con su email asignado, con una descripción en texto y un identificador único, creado por git.
+Pongamos que creamos un proyecto de software, y nos interesan distintas versiones.
+
+	- Una versión para desarrollo, con los recursos creados en el equipo local para poder usarlos fácilmente y sin conexión.
+	- Una versión para montaje, con sus recursos que apuntarán a otro servidor, con añadidos de seguridad, etc
+	
+Cada versión del equipo tendrá archivos distintos, aunque muchos sean los mismos archivos.
+
+En este caso crearemos dos versiones, una para desarrollo y otra para montaje.
+
+Para poder hacer esto, usaremos las ramas.
+En Git, estas ramas son denominadas branches o branch, para cada una, y es un término concreto que usaremos a menudo.
+Cada branch tiene un nombre que le asignaremos al crearla y cada nombre será distinto, dentro de cada proyecto.
+
+En un repo de git recién creado, sin ningún archivo guardado, existirá una rama por defecto.
+Esta rama se llama ahora mismo main, anteriormente se llamo master y, de todos modos, podemos darle el nombre que queramos.
+
+
+COMMIT - CADA REGISTRO DE LOS CAMBIOS
+
+También los registros de cambios se irán almacenando, según el usuario considere. Estos registros, llamados commits, estarán asignados a un usuario, con su email asignado, con una descripción en texto y un identificador único, creado por git.
 
 CONTENIDO DE UNA CARPETA GIT
 
 El contenido de la carpeta, como dijimos, apunta a un registro.
 Si cambiamos el registro al que apunta, es posible que los archivos también cambien, no existan, o lo que sea, dependiendo de lo que hayamos hecho en esa rama y en ese registro.
 
+
 REPOSITORIO DE GIT LOCAL
 
-Todos los cambios que hagamos en nuestro repositorio se harán de forma local, de forma que se harán rápidamente.
+Por el momento, en todos estos términos, hablamos de cambios locales, que solo serán vistos por nuestro repo Git, que llamaremos repo local.
+Esto hace que cada cambio sea rápido y no necesitemos conexión.
 
 
 REPOSITORIO REMOTO
